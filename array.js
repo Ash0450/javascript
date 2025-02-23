@@ -139,4 +139,24 @@ let products = [
   // Calculate total price of all products
   let totalPrice = products.reduce((accumulator, product) => accumulator + product.price, 0);
   console.log(totalPrice);  // Output: 2250
-  
+
+
+  let g=[1,7,8,9,6,10];
+  let tot= g.reduceRight((acc,val)=>acc+val,0);
+  console.log(tot);
+
+//array.flat() method
+// The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+
+let arrFlat = [1,[2,[3,[4,[5]]]]]
+let flatten = arrFlat.flat(2);
+console.log(flatten);
+// console.log(arrFlat);
+
+const arr = [1, 2, , 3];
+const flattened = arr.flat();
+console.log(flattened); //empty element is removed
+
+let infinite = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+let flat = infinite.flat(Infinity);
+console.log(flat);
